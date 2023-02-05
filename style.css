@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap");
 
 *,
 *::before,
@@ -11,102 +11,171 @@
 :root {
   --Very-Dark-Magenta: hsl(300, 43%, 22%);
   --Soft-Pink: hsl(333, 80%, 67%);
-  --pink: #F7F2F7;
+  --pink: #f7f2f7;
   --Dark-Grayish-Magenta: hsl(303, 10%, 53%);
   --Light-Grayish-Magenta: hsl(300, 24%, 96%);
   --White: hsl(0, 0%, 100%);
 }
 
-body{
-    font-family: 'League Spartan', sans-serif;
-    background-color: var(--Light-Grayish-Magenta);
-    
+body {
+  font-family: "League Spartan", sans-serif;
+  background-color: var(--Light-Grayish-Magenta);
+  height: 100vh;
+  background-color: var(--White);
 
+  margin: 0 auto;
+  padding: 1.6rem;
+  position: relative;
 }
 
-.container{
-    background-color: var(--White);
-   max-width: 375px;
-   margin: 0 auto;
-   padding: 1.6rem;
-   position: relative;
-
+.top-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
-.top-svg{
+.top-svg-desktop {
+  display: none;
+}
+.top__first-half {
+  max-width: 327px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.top__title {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 17px;
+  color: var(--Very-Dark-Magenta);
+}
+.top__text {
+  font-size: 19px;
+  margin-bottom: 2rem;
+}
+.rating-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--pink);
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 15px;
+}
+.rating-section:nth-child(3) {
+  margin-bottom: 3rem;
+}
+.rating-section > div {
+  margin-bottom: 0.5rem;
+}
+.box {
+  padding: 2.5rem 2rem;
+  background-color: var(--Very-Dark-Magenta);
+  margin-bottom: 1rem;
+  color: var(--White);
+  font-size: 17px;
+  border-radius: 15px;
+}
+.avatar {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.avatar img {
+  width: 40px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+.avatar .title {
+  font-size: 1rem;
+}
+.avatar .job {
+  font-size: 1rem;
+  color: var(--Soft-Pink);
+  font-weight: 300;
+}
+
+.bottom-svg {
+  position: absolute;
+  right: 0;
+  top: 800px;
+}
+.bottom-svg-desktop {
+  display: none;
+}
+
+@media screen and (min-width: 1440px) {
+  .top-svg {
+    display: none;
+  }
+  .top-svg-desktop {
+    display: block;
     position: absolute;
     top: 0;
     left: 0;
-}
-.top__first-half{
-    max-width: 327px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.top__title{
-    font-size: 40px;
-    font-weight: 700;
-    margin-bottom: 17px;
-    color: var(--Very-Dark-Magenta);
-
-}
-.top__text{
-    font-size:19px ;
-    margin-bottom: 2rem;
-}
-.rating-section{
+  }
+  .top {
+    padding-top: 6rem;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    background-color: var(--pink);
-    margin-bottom: 1rem;
-    padding: 1rem;
-    border-radius: 15px;
-}
-.rating-section:nth-child(3){
-    margin-bottom:3rem ;
-}
-.rating-section > div{
-    margin-bottom: 0.5rem;
-}
-.box{
-    padding: 2.5rem 2rem;
-    background-color: var(--Very-Dark-Magenta)
-    ;
-    margin-bottom: 1rem;
-    color: var(--White);
-    font-size: 17px;
-    border-radius: 15px;
-
-}
-.avatar{
-display: flex;
-margin-bottom: 1rem;
-}
-
-.avatar img{
-    width: 40px;
-    object-fit: cover;
-    border-radius: 50%;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+  }
+  .top__first-half {
+    margin: 0;
+  }
+  .top__title,
+  .top__text {
+    text-align: left;
+  }
+  .rating-sections {
+    width: 540px;
+  }
+  .rating-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 80%;
+  }
+  .rating-section div {
+    margin-bottom: 0;
     margin-right: 1rem;
-}
-.avatar .title{
-    font-size: 1rem;
-}
-.avatar .job{
-    font-size: 1rem;
-    color: var(--Soft-Pink);
-    font-weight: 300;
-}
+  }
 
-.bottom-svg{
+  .rating-section:nth-child(2) {
+    margin-left: 2rem;
+  }
+  .rating-section:nth-child(3) {
+    margin-left: 6rem;
+  }
+  .bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 270px;
+    width: 80%;
+    margin: 03rem auto 0;
+  }
+  .box {
+    height: 234px;
+    width: 350px;
+  }
+  .box:nth-child(2) {
+    align-self: center;
+    margin: 0;
+  }
+  .box:nth-child(3) {
+    align-self: flex-end;
+    margin: 0;
+  }
+  .bottom-svg {
+    display: none;
+  }
+  .bottom-svg-desktop {
+    display: block;
     position: absolute;
-    right: 0;
     bottom: 0;
+    right: 0;
+  }
 }
-
-
-
-
-
-
