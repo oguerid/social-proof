@@ -37,20 +37,22 @@ body {
   display: none;
 }
 .top__first-half {
-  max-width: 327px;
+  max-width: 400px;
   margin: 0 auto;
   text-align: center;
 }
 
 .top__title {
-  font-size: 40px;
+  font-size: 45px;
   font-weight: 700;
   margin-bottom: 17px;
   color: var(--Very-Dark-Magenta);
 }
 .top__text {
-  font-size: 19px;
+  font-size: 16px;
   margin-bottom: 2rem;
+  color: var(--Very-Dark-Magenta);
+  line-height: 1.6;
 }
 .rating-section {
   display: flex;
